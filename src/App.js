@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Nav from './components/Nav';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Categories from './components/Categories';
+import Reviews from './components/Reviews';
+import Users from './components/Users';
 
 function App() {
   return (
-    <div className='App'>
-      <Router>
-        <Header />
-        <Nav />
-        <Switch>
-          <Route>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-          </Route>
-        </Switch>
-      </Router>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route exact path='/reviews'>
+          <Reviews />
+        </Route>
+        <Route exact path='/categories'>
+          <Categories />
+        </Route>
+        <Route exact path='/users'>
+          <Users />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
