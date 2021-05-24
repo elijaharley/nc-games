@@ -1,25 +1,27 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
+import { Container, Nav } from 'react-bootstrap';
 // import { useEffect, useState } from 'react';
 // import * as api from '../Utils/api';
 
 const Navbar = () => {
   return (
-    <Nav justify variant='tabs' defaultActiveKey='/home'>
-      <Nav.Item>
-        <Nav.Link href='/'>Home</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link href='/categories'>Categories</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link href='/reviews'>Reviews</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link href='/users'>Users</Nav.Link>
-      </Nav.Item>
-    </Nav>
+    <Container className='container-layout'>
+      <Nav justify variant='info' defaultActiveKey='/home'>
+        <Nav.Item>
+          <Nav.Link href='/'>Home</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href='/categories'>Categories</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href='/reviews'>Reviews</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href='/users'>Users</Nav.Link>
+        </Nav.Item>
+      </Nav>
+    </Container>
   );
 };
 

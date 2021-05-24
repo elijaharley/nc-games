@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Card, Container } from 'react-bootstrap';
+import { Card, Container, Jumbotron } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 
@@ -16,11 +16,18 @@ const Reviews = () => {
   if (isLoading) return <p>Loading...</p>;
   return (
     <Container className='container-layout'>
-      <h2>Reviews</h2>
+      <Jumbotron>
+        <h2>Reviews</h2>
+      </Jumbotron>
       {reviews.map((reviews) => {
         return (
           <h2 className='m-3' key={reviews.review_id}>
             <Card className='h-100 shadow-sm bg-white rounded'>
+              <Card.Img
+                variant='top'
+                src={reviews.review_img_url}
+                alt={reviews.owner}
+              />
               <Card.Body className='d-flex flex-column'>
                 <div className='d-flex mb-2 justify-content-between'>
                   <Card.Title className='mb-0 font-weight-bold'>
@@ -28,7 +35,7 @@ const Reviews = () => {
                   </Card.Title>
                 </div>
                 <Card.Text className='text-secondary'>
-                  {reviews.owner}
+                  {reviews.category}
                 </Card.Text>
               </Card.Body>
             </Card>

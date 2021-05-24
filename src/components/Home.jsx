@@ -1,10 +1,13 @@
 import React from 'react';
+import { Container, Jumbotron } from 'react-bootstrap';
 
 const Home = () => {
   return (
-    <div>
-      <h1> NC Games</h1>
-    </div>
+    <Container className='container-layout'>
+      <Jumbotron className='jumbotron'>
+        <h1> NC Games</h1>
+      </Jumbotron>
+    </Container>
   );
 };
 

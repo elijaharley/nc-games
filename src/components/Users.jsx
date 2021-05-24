@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Card, Container } from 'react-bootstrap';
+import { Card, Container, Jumbotron } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 
@@ -16,7 +16,9 @@ const Users = () => {
   if (isLoading) return <p>Loading...</p>;
   return (
     <Container className='container-layout'>
-      <h2>Users</h2>
+      <Jumbotron variant='dark'>
+        <h2>Users</h2>
+      </Jumbotron>
       {users.map((user) => {
         return (
           <h2 className='m-3' key={user.username}>
