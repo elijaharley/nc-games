@@ -22,7 +22,7 @@ const Reviews = () => {
       {reviews.map((reviews) => {
         return (
           <h2 className='m-3' key={reviews.review_id}>
-            <Card className='h-100 shadow-sm bg-white rounded'>
+            <Card id='card' className='h-100 shadow-sm bg-white rounded'>
               <Card.Img
                 variant='top'
                 src={reviews.review_img_url}

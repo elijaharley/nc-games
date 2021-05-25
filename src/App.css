@@ -1,11 +1,18 @@
 * {
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+.container {
+  background-color: rgb(152, 187, 189);
 }
 
 .jumbotron {
-  color: #0a2458;
+  background-color: #464142ef !important;
+  font-weight: 300;
+  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav {
+  color: #464142ef;
 }

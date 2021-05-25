@@ -4,7 +4,7 @@ import { Container, Jumbotron } from 'react-bootstrap';
 const Home = () => {
   return (
     <Container className='container-layout'>
-      <Jumbotron className='jumbotron'>
+      <Jumbotron>
         <h1> NC Games</h1>
       </Jumbotron>
     </Container>
