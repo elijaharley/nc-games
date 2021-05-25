@@ -7,7 +7,7 @@ import Categories from './components/Categories';
 import Reviews from './components/Reviews';
 import Users from './components/Users';
 import { UserProvider } from './context/user';
-import RequireLogin from './components/RequireLogin';
+//import RequireLogin from './components/RequireLogin';
 
 function App() {
   return (
@@ -15,20 +15,20 @@ function App() {
       <Navbar />
       <Switch>
         <UserProvider>
-          <RequireLogin>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route exact path='/reviews'>
-              <Reviews />
-            </Route>
-            <Route exact path='/categories'>
-              <Categories />
-            </Route>
-            <Route exact path='/users'>
-              <Users />
-            </Route>
-          </RequireLogin>
+          {/* <RequireLogin> */}
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route exact path='/reviews'>
+            <Reviews />
+          </Route>
+          <Route exact path='/categories'>
+            <Categories />
+          </Route>
+          <Route exact path='/users'>
+            <Users />
+          </Route>
+          {/* </RequireLogin> */}
         </UserProvider>
       </Switch>
     </Router>
