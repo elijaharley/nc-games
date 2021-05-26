@@ -6,20 +6,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 import { Link } from 'react-router-dom';
 
-const ReviewsById = () => {
+const SingleCategory = () => {
   const [reviews, setReviews] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const params = useParams();
 
-  const singleReview = [];
   useEffect(() => {
     api.getReviews().then((response) => {
+      const reviewsByCategory = [];
       response.filter((obj) => {
-        if (obj.review_id === +params.review_id) {
-          singleReview.push(obj);
+        if (obj.category === params.category) {
+          reviewsByCategory.push(obj);
         }
       });
-      setReviews(singleReview);
+      setReviews(reviewsByCategory);
       setIsLoading(false);
     });
   }, [params]);
@@ -27,7 +27,7 @@ const ReviewsById = () => {
   return (
     <Container className='container-layout'>
       <Jumbotron>
-        <h2>Reviews By ID</h2>
+        <h2>Reviews By Category</h2>
       </Jumbotron>
       <div>
         {reviews.map((review) => {
@@ -37,7 +37,7 @@ const ReviewsById = () => {
               key={`${review.review_id}`}
               className='h-100 shadow-sm bg-white rounded'
             >
-              <Link to={`/categories/${params.review_id}`}></Link>
+              <Link to={`/categories/${params.category}`}></Link>
               <Card.Img
                 variant='top'
                 src={review.review_img_url}
@@ -60,5 +60,4 @@ const ReviewsById = () => {
     </Container>
   );
 };
-
-export default ReviewsById;
+export default SingleCategory;
