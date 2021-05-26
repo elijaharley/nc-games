@@ -22,22 +22,22 @@ const SingleCategory = () => {
       setReviews(reviewsByCategory);
       setIsLoading(false);
     });
-  }, [params]);
+  }, [params.category]);
   if (isLoading) return <p>Loading...</p>;
   return (
     <Container className='container-layout'>
       <Jumbotron>
-        <h2>Reviews By Category</h2>
+        <h2>{`${params.category}`} games</h2>
       </Jumbotron>
-      <div>
-        {reviews.map((review) => {
-          return (
+
+      {reviews.map((review) => {
+        return (
+          <Link to={`/reviews/${review.review_id}`}>
             <Card
               id='card'
               key={`${review.review_id}`}
               className='h-100 shadow-sm bg-white rounded'
             >
-              <Link to={`/categories/${params.category}`}></Link>
               <Card.Img
                 variant='top'
                 src={review.review_img_url}
@@ -54,9 +54,9 @@ const SingleCategory = () => {
                 </Card.Text>
               </Card.Body>
             </Card>
-          );
-        })}
-      </div>
+          </Link>
+        );
+      })}
     </Container>
   );
 };
