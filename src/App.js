@@ -28,9 +28,9 @@ function App() {
           <Route exact path='/reviews/:review_id'>
             <ReviewsById />
           </Route>
-          <Route exact path='/reviews/:review_id/comments'>
+          {/* <Route exact path='/reviews/:review_id/comments'>
             <CommentsByReviewId />
-          </Route>
+          </Route> */}
           <Route exact path='/categories'>
             <Categories />
           </Route>

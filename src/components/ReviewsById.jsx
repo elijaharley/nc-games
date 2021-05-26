@@ -34,7 +34,7 @@ const ReviewsById = () => {
               key={`${review.review_id}`}
               className='h-100 shadow-sm bg-white rounded'
             >
-              <Link to={`/reviews/${params.review_id}`}></Link>
+              <Link to={`/categories/${params.review_id}`}></Link>
               <Card.Img
                 variant='top'
                 src={review.review_img_url}
