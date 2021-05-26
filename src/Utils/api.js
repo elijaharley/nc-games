@@ -14,6 +14,11 @@ export const getReviews = async () => {
   return data.reviews;
 };
 
+export const getReviewsById = async (param) => {
+  const { data } = await gamesApi.get('/reviews/param');
+  return data.reviews;
+};
+
 export const getUsers = async () => {
   const { data } = await gamesApi.get('users');
   return data.users;

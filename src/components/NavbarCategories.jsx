@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import * as api from '../Utils/api';
 
 const NavbarCategories = () => {
-  const [categories, setCategories] = useState('');
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     api.getCategories().then((categoriesFromApi) => {
@@ -14,9 +14,9 @@ const NavbarCategories = () => {
 
   return categories.map((category) => {
     return (
-      <Nav.Item>
+      <Nav.Item key={category.slug}>
         {category.slug}
-        <Link to={category.slug}></Link>
+        <Link to>{category.slug}</Link>
       </Nav.Item>
     );
   });

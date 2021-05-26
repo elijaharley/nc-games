@@ -7,6 +7,7 @@ import Categories from './components/Categories';
 import Reviews from './components/Reviews';
 import Users from './components/Users';
 import { UserProvider } from './context/user';
+import ReviewsById from './components/ReviewsById';
 //import RequireLogin from './components/RequireLogin';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route exact path='/reviews'>
             <Reviews />
+          </Route>
+          <Route exact path='/reviews/:review_id'>
+            <ReviewsById />
           </Route>
           <Route exact path='/categories'>
             <Categories />
