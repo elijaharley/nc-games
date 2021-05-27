@@ -1,12 +1,13 @@
 import React from 'react';
 import * as api from './api';
 import { useState } from 'react';
+import { Badge } from 'react-bootstrap';
 
 const Votes = ({ votes, review_id }) => {
-  const [upVote, setUpVote] = useState(votes);
+  const [upVote, setUpVote] = useState(0);
 
   const incVotes = () => {
-    setUpVote((currVotes) => currVotes + 1);
+    setUpVote((votes) => votes + 1);
     api.patchReviewVotes(review_id, 1).catch(() => {
       setUpVote(0);
     });
@@ -15,7 +16,9 @@ const Votes = ({ votes, review_id }) => {
   return (
     <div>
       <p>Votes: {votes + upVote}</p>
-      <button onClick={incVotes}>Add Votes</button>
+      <Badge variant='info' onClick={incVotes}>
+        Add Votes
+      </Badge>
     </div>
   );
 };

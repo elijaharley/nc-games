@@ -8,12 +8,17 @@ increase votes - patch rq
 CommentsByReviewId - 
 sort formatting on comments.created_at
 create comment functionality - post rq
+error handling for no comments
 
 Home - 
 Links on page
+
+Users - 
+default img for missing imgs
 
 Nav -
 styling
 
 General - 
 export functions from components to make reusable
+margins bottom on all pages

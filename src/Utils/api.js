@@ -33,3 +33,19 @@ export const getUsers = async () => {
   const { data } = await gamesApi.get('users');
   return data.users;
 };
+
+export const patchReviewVotes = async (review_id, votes) => {
+  const { data } = await gamesApi.patch(`/reviews/${review_id}`, {
+    review_id,
+    votes
+  });
+  console.log(data.votes);
+};
+
+export const postComment = async (review_id, comment) => {
+  const { data } = await gamesApi.post(`/reviews/${review_id}/comments`, {
+    review_id,
+    comment
+  });
+  console.log(data.comment);
+};
