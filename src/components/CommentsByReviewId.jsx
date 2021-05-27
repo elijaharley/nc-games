@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import * as api from '../Utils/api';
-import { Badge, Card, Container, Jumbotron } from 'react-bootstrap';
+import { Card, Container, Jumbotron } from 'react-bootstrap';
 import Votes from '../Utils/Votes';
+import CommentAdder from '../Utils/CommentAdder';
 
 const CommentsByReviewId = () => {
   const [comments, setComments] = useState([]);
@@ -22,6 +23,9 @@ const CommentsByReviewId = () => {
       <Jumbotron>
         <h2>Comments for Review #{`${params.review_id}`}</h2>
       </Jumbotron>
+      <h5>
+        <CommentAdder setComments={params.review_id} />
+      </h5>
       {comments.map((comment) => {
         return (
           <h2 className='m-3' key={comment.comment_id}>
@@ -44,9 +48,6 @@ const CommentsByReviewId = () => {
           </h2>
         );
       })}
-      <h5>
-        <Badge variant='info'>Add Comment</Badge>
-      </h5>
     </Container>
   );
 };

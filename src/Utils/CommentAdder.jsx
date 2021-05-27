@@ -23,7 +23,7 @@ const CommentAdder = ({ review_id }) => {
         id='comment'
         value={comment}
         onChange={(e) => {
-          setComments(e.target.value);
+          setComment(e.target.value);
         }}
         required
       />
@@ -31,4 +31,4 @@ const CommentAdder = ({ review_id }) => {
   );
 };
 
-export default Votes;
+export default CommentAdder;
