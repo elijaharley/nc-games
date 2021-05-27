@@ -1,0 +1,19 @@
+Reviews - 
+implement vote add, 
+Link to commentsByReviewId
+
+Votes - 
+increase votes - patch rq
+
+CommentsByReviewId - 
+sort formatting on comments.created_at
+create comment functionality - post rq
+
+Home - 
+Links on page
+
+Nav -
+styling
+
+General - 
+export functions from components to make reusable

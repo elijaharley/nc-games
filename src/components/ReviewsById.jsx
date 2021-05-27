@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Card, Container } from 'react-bootstrap';
+import { Badge, Card, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 import { Link } from 'react-router-dom';
@@ -51,10 +51,18 @@ const ReviewsById = () => {
                   {review.review_body}
                 </Card.Text>
               </Card.Body>
+              <div>
+                <Link to={`/reviews/${review.review_id}/comments`}>
+                  <h5>
+                    <Badge variant='info'>Comments</Badge>
+                  </h5>
+                </Link>
+              </div>
             </Card>
           );
         })}
       </div>
+      <div></div>
     </Container>
   );
 };

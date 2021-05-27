@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Button, Card, Container, Jumbotron } from 'react-bootstrap';
+import { Badge, Card, Container, Jumbotron } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 import { useParams } from 'react-router-dom';
@@ -48,9 +48,10 @@ const Reviews = () => {
                     {reviews.category}
                   </Card.Text>
                   <p>
-                    {' '}
-                    Votes {`${reviews.votes}`} <Button>Add Votes</Button>{' '}
-                    {/*TODO - implement vote add, Link to comments*/}
+                    Votes {`${reviews.votes}`}
+                    <h5>
+                      <Badge variant='info'>Add Votes</Badge>
+                    </h5>
                   </p>
                 </Card.Body>
               </Card>
