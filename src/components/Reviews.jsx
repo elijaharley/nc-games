@@ -47,12 +47,10 @@ const Reviews = () => {
                   <Card.Text className='text-secondary'>
                     {reviews.category}
                   </Card.Text>
-                  <p>
-                    Votes {`${reviews.votes}`}
-                    <h5>
-                      <Badge variant='info'>Add Votes</Badge>
-                    </h5>
-                  </p>
+                  Votes {`${reviews.votes}`}
+                  <h5>
+                    <Badge variant='info'>Add Votes</Badge>
+                  </h5>
                 </Card.Body>
               </Card>
             </Link>

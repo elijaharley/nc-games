@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import * as api from '../Utils/api';
-import { Badge, Card, Container, Jumbotron } from 'react-bootstrap';
+import { Button, Card, Container, Jumbotron } from 'react-bootstrap';
 
 const CommentsByReviewId = () => {
   const [comments, setComments] = useState([]);
@@ -35,18 +35,18 @@ const CommentsByReviewId = () => {
                   </Card.Title>
                 </div>
                 <Card.Text className='text-secondary'>{comment.body}</Card.Text>
-                <p> Votes {`${comment.votes}`} </p>
+                Votes {`${comment.votes}`}{' '}
                 <h5>
-                  <Badge variant='info'>Add Votes</Badge>
+                  <Button>Add Votes</Button>
                 </h5>
               </Card.Body>
             </Card>
           </h2>
         );
       })}
-      <h5>
-        <Badge variant='info'>Add Comment</Badge>
-      </h5>
+      <p>
+        <Button>Add Comment</Button>
+      </p>
     </Container>
   );
 };
