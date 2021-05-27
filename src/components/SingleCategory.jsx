@@ -33,27 +33,29 @@ const SingleCategory = () => {
 
       {reviews.map((review) => {
         return (
-          <Link to={`/reviews/${review.review_id}`}>
-            <h2 className='m-3' key={`${review.review_id}`}>
-              <Card className='h-100 shadow-sm bg-white rounded'>
-                <Card.Img
-                  variant='top'
-                  src={review.review_img_url}
-                  alt={review.title}
-                />
-                <Card.Body className='d-flex flex-column'>
-                  <div className='d-flex mb-2 justify-content-between'>
-                    <Card.Title className='mb-0 font-weight-bold'>
-                      {review.title}
-                    </Card.Title>
-                  </div>
-                  <Card.Text className='text-secondary'>
-                    {review.category}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </h2>
-          </Link>
+          <div key={`${review.review_id}`}>
+            <Link to={`/reviews/${review.review_id}`}>
+              <h2 className='m-3' key={`${review.review_id}`}>
+                <Card className='h-100 shadow-sm bg-white rounded'>
+                  <Card.Img
+                    variant='top'
+                    src={review.review_img_url}
+                    alt={review.title}
+                  />
+                  <Card.Body className='d-flex flex-column'>
+                    <div className='d-flex mb-2 justify-content-between'>
+                      <Card.Title className='mb-0 font-weight-bold'>
+                        {review.title}
+                      </Card.Title>
+                    </div>
+                    <Card.Text className='text-secondary'>
+                      {review.category}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </h2>
+            </Link>
+          </div>
         );
       })}
     </Container>

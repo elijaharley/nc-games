@@ -22,19 +22,21 @@ const Categories = () => {
       </Jumbotron>
       {categories.map((category) => {
         return (
-          <Link to={`categories/${category.slug}`}>
-            <div className='m-3' key={`${category.slug}`}>
-              <Card className='h-100 shadow-sm bg-white rounded'>
-                <Card.Body className='d-flex flex-column'>
-                  <div className='d-flex mb-2 justify-content-between'>
-                    <Card.Title className='mb-0 font-weight-bold'>
-                      {category.slug}
-                    </Card.Title>
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
-          </Link>
+          <div key={`${category.slug}`}>
+            <Link to={`categories/${category.slug}`}>
+              <div className='m-3'>
+                <Card className='h-100 shadow-sm bg-white rounded'>
+                  <Card.Body className='d-flex flex-column'>
+                    <div className='d-flex mb-2 justify-content-between'>
+                      <Card.Title className='mb-0 font-weight-bold'>
+                        {category.slug}
+                      </Card.Title>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </div>
+            </Link>
+          </div>
         );
       })}
     </Container>

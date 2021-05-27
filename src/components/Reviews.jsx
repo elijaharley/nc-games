@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Card, Container, Jumbotron } from 'react-bootstrap';
+import { Button, Card, Container, Jumbotron } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 import { useParams } from 'react-router-dom';
@@ -47,6 +47,11 @@ const Reviews = () => {
                   <Card.Text className='text-secondary'>
                     {reviews.category}
                   </Card.Text>
+                  <p>
+                    {' '}
+                    Votes {`${reviews.votes}`} <Button>Add Votes</Button>{' '}
+                    {/*TODO - implement vote add, Link to comments*/}
+                  </p>
                 </Card.Body>
               </Card>
             </Link>

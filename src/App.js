@@ -9,7 +9,7 @@ import Reviews from './components/Reviews';
 import Users from './components/Users';
 import ReviewsById from './components/ReviewsById';
 import SingleCategory from './components/SingleCategory';
-//import CommentsByReviewId from './components/CommentsByReviewId';
+import CommentsByReviewId from './components/CommentsByReviewId';
 //import RequireLogin from './components/RequireLogin';
 
 function App() {
@@ -28,9 +28,9 @@ function App() {
           <Route exact path='/reviews/:review_id'>
             <ReviewsById />
           </Route>
-          {/* <Route exact path='/reviews/:review_id/comments'>
+          <Route exact path='/reviews/:review_id/comments'>
             <CommentsByReviewId />
-          </Route> */}
+          </Route>
           <Route exact path='/categories'>
             <Categories />
           </Route>
