@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Card, Container, Button } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 import { Link } from 'react-router-dom';
@@ -11,13 +11,14 @@ const ReviewsById = () => {
   const [isLoading, setIsLoading] = useState(true);
   const params = useParams();
 
-  const singleReview = [];
   useEffect(() => {
+    const singleReview = [];
     api.getReviews().then((response) => {
       response.filter((obj) => {
         if (obj.review_id === +params.review_id) {
           singleReview.push(obj);
         }
+        return null;
       });
       setReviews(singleReview);
       setIsLoading(false);
@@ -54,7 +55,6 @@ const ReviewsById = () => {
           );
         })}
       </div>
-      {/* <Button primary>{(onClick = 'showComments')}Comments</Button> */}
     </Container>
   );
 };

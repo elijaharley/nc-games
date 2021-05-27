@@ -9,7 +9,7 @@ import Reviews from './components/Reviews';
 import Users from './components/Users';
 import ReviewsById from './components/ReviewsById';
 import SingleCategory from './components/SingleCategory';
-import CommentsByReviewId from './components/CommentsByReviewId';
+//import CommentsByReviewId from './components/CommentsByReviewId';
 //import RequireLogin from './components/RequireLogin';
 
 function App() {

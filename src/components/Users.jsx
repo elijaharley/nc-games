@@ -13,7 +13,9 @@ const Users = () => {
       setIsLoading(false);
     });
   }, []);
+
   if (isLoading) return <p>Loading...</p>;
+
   return (
     <Container className='container-layout'>
       <Jumbotron variant='dark'>

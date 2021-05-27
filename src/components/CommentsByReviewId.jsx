@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import * as api from '../Utils/api';
-import { Card, Container, Button } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 
 const CommentsByReviewId = () => {
   const [comments, setComments] = useState([]);

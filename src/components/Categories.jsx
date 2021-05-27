@@ -23,7 +23,7 @@ const Categories = () => {
       {categories.map((category) => {
         return (
           <Link to={`categories/${category.slug}`}>
-            <h2 className='m-3' key={category.slug}>
+            <div className='m-3' key={`${category.slug}`}>
               <Card className='h-100 shadow-sm bg-white rounded'>
                 <Card.Body className='d-flex flex-column'>
                   <div className='d-flex mb-2 justify-content-between'>
@@ -33,7 +33,7 @@ const Categories = () => {
                   </div>
                 </Card.Body>
               </Card>
-            </h2>
+            </div>
           </Link>
         );
       })}
