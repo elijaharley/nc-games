@@ -9,15 +9,24 @@ import Votes from '../Utils/Votes';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState('');
-  const params = useParams();
-
+  const [sortOrder, setSortOrder] = useState('ASC');
   const [isLoading, setIsLoading] = useState(true);
+  const params = useParams();
+  console.log(params);
+
   useEffect(() => {
-    api.getReviews(params.review_id).then((response) => {
-      setReviews(response);
-      setIsLoading(false);
-    });
-  }, [params.review_id]);
+    setIsLoading(true);
+    api
+      .getReviews({ sortOrder })
+      .then((response) => {
+        setReviews(response);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        return <h2>Error</h2>;
+      });
+  }, [sortOrder]);
+
   if (isLoading) return <p>Loading...</p>;
 
   return (

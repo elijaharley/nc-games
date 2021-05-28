@@ -3,29 +3,25 @@ import * as api from './api';
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 
-const CommentAdder = ({ currentComments }) => {
+const CommentAdder = ({ review_id }) => {
   const [comment, setComment] = useState('');
-  <form
-    onSubmit={(e) => {
-      e.preventDefault();
-      api
-        .postComment(currentComments.review_id, comment)
-        .then((postedComment) => {
-          setComment((postedComment) => {
-            console.log([postedComment, ...currentComments]);
-            return [postedComment, ...currentComments];
-          });
-        });
-    }}
-  />;
   return (
     <Container>
-      <form>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          api.postComment(review_id, comment).then((postedComment) => {
+            setComment((currentComments) => {
+              console.log([postedComment, ...currentComments]);
+              return [postedComment, ...currentComments];
+            });
+          });
+        }}
+      >
         <label htmlFor='comment'>add comment</label>
         <input
           type='text'
           id='comment'
-          submit='button'
           value={comment}
           onChange={(e) => {
             setComment(e.target.value);

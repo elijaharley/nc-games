@@ -1,9 +1,7 @@
 Reviews - 
-implement vote add, 
-Link to commentsByReviewId
-
-Votes - 
-increase votes - patch rq
+implement vote add
+combine single category with reviews
+sort out sort_by
 
 CommentsByReviewId - 
 sort formatting on comments.created_at
@@ -20,5 +18,8 @@ Nav -
 styling
 
 General - 
+Error handling catch blocks
 export functions from components to make reusable
-margins bottom on all pages
+color margins bottom on all pages
+add backend end points for votes
+

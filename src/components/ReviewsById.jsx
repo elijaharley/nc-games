@@ -5,6 +5,7 @@ import { Badge, Card, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 import { Link } from 'react-router-dom';
+import Votes from '../Utils/Votes';
 
 const ReviewsById = () => {
   const [reviews, setReviews] = useState('');
@@ -51,10 +52,13 @@ const ReviewsById = () => {
                   {review.review_body}
                 </Card.Text>
               </Card.Body>
+              <h5>
+                <Votes votes={review.votes} review_id={review.review_id} />
+              </h5>
               <div>
                 <Link to={`/reviews/${review.review_id}/comments`}>
                   <h5>
-                    <Badge variant='info'>Comments</Badge>
+                    <Badge variant='primary'>Comments</Badge>
                   </h5>
                 </Link>
               </div>

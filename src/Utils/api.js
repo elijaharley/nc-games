@@ -14,10 +14,17 @@ export const getSingleCategory = async (category) => {
   return data.categories;
 };
 
-export const getReviews = async () => {
-  const { data } = await gamesApi.get('/reviews');
-  return data.reviews;
-};
+export const getReviews = async (category) =>
+  // { sortOrder }
+  {
+    const { data } = await gamesApi.get(
+      '/reviews'
+      // {
+      //   params: { category: sortOrder, sort_by: this.created_at }
+      // }
+    );
+    return data.reviews;
+  };
 
 export const getReviewsById = async (review_id) => {
   const { data } = await gamesApi.get(`/reviews/${review_id}`);
@@ -34,10 +41,9 @@ export const getUsers = async () => {
   return data.users;
 };
 
-export const patchReviewVotes = async (review_id, votes) => {
+export const patchReviewVotes = async (review_id, inc_votes) => {
   const { data } = await gamesApi.patch(`/reviews/${review_id}`, {
-    review_id,
-    votes
+    inc_votes
   });
   console.log(data.votes);
 };

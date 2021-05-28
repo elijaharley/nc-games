@@ -24,7 +24,7 @@ const CommentsByReviewId = () => {
         <h2>Comments for Review #{`${params.review_id}`}</h2>
       </Jumbotron>
       <h5>
-        <CommentAdder setComments={params} />
+        <CommentAdder setComments={params.review_id} />
       </h5>
       {comments.map((comment) => {
         return (
