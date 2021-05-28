@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Card, Container, Jumbotron } from 'react-bootstrap';
+import { Badge, Card, Container, Jumbotron } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 import { useParams } from 'react-router-dom';
@@ -38,6 +38,15 @@ const Reviews = () => {
           <h2>Reviews</h2>
         </Jumbotron>
       )}
+      <Badge
+        variant='info'
+        onClick={() => {
+          setSortOrder('ASC');
+          setReviews((reviews) => [...reviews].sort());
+        }}
+      >
+        Sort Ascending
+      </Badge>
       {reviews.map((reviews) => {
         return (
           <h2 className='m-3' key={reviews.review_id}>

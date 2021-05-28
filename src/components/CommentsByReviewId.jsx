@@ -6,7 +6,7 @@ import Votes from '../Utils/Votes';
 import CommentAdder from '../Utils/CommentAdder';
 
 const CommentsByReviewId = () => {
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const params = useParams();
 

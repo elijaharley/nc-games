@@ -50,7 +50,6 @@ export const patchReviewVotes = async (review_id, inc_votes) => {
 
 export const postComment = async (review_id, comment) => {
   const { data } = await gamesApi.post(`/reviews/${review_id}/comments`, {
-    review_id,
     comment
   });
   console.log(data.comment);
