@@ -14,15 +14,10 @@ Links on page
 Users - 
 default img for missing imgs
 
-Nav -
-styling
-
 General - 
 Error handling catch blocks
 export functions from components to make reusable
-color margins bottom on all pages
-text color links
-add backend end points for votes
+text color link
 
 
 # Checklist for Northcoders Games Front End

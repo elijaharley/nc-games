@@ -30,7 +30,7 @@ const Reviews = () => {
   if (isLoading) return <p>Loading...</p>;
 
   return (
-    <Container fluid className='container-layout'>
+    <Container fluid className='container-layout justify-content-center'>
       {params.review_id ? (
         `Review #${params.review_id}`
       ) : (
@@ -53,12 +53,11 @@ const Reviews = () => {
           return (
             <h2 className='m-3' key={reviews.review_id}>
               <Card
-                border='info'
                 style={{ width: '18rem' }}
-                id='card'
+                id='card-columns'
                 className='h-100 shadow-sm bg-white rounded'
               >
-                <Link to={`/reviews/${reviews.review_id}`}>
+                <Link to={`/reviews/${reviews.review_id}`} className='link'>
                   <Card.Img
                     variant='top'
                     src={reviews.review_img_url}
@@ -67,7 +66,7 @@ const Reviews = () => {
                   />
                 </Link>
                 <Card.Body className='d-flex flex-column'>
-                  <div className='d-flex mb-2 justify-content-between'>
+                  <div className='d-flex mb-2 justify-content-around'>
                     <Link to={`/reviews/${reviews.review_id}`}>
                       <Card.Title className='mb-0 font-weight-bold'>
                         {reviews.title}
