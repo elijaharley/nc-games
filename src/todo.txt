@@ -1,12 +1,12 @@
 Reviews - 
-implement vote add
 combine single category with reviews
-sort out sort_by
+sort out sort_by - error msg - elijaharley-games.herokuapp.com/api/reviews?category=%7B%22sortOrder%22:%22ASC%22%7D&sort_by=ASC:1 Failed to load resource: the 
 
 CommentsByReviewId - 
-sort formatting on comments.created_at
+sort formatting on timestamp
 create comment functionality - post rq
 error handling for no comments
+post rq error - https://elijaharley-games.herokuapp.com/api/reviews/undefined/comments
 
 Home - 
 Links on page
@@ -21,5 +21,73 @@ General -
 Error handling catch blocks
 export functions from components to make reusable
 color margins bottom on all pages
+text color links
 add backend end points for votes
 
+
+# Checklist for Northcoders Games Front End
+
+## README - write your own and make sure that it:
+- [ ] has a link to the deployed version
+- [ ] provides general info about your app
+- [ ] includes links to your back end repo
+- [ ] specifies the minimum version of Node required to run locally (check your Node version, `node --version` and use the major version that you are on)
+- [ ] has clear instructions on how to run your project locally (`git clone <repo-url>, cd ...`)
+
+## UX
+- [X] Basic styling added
+- [X] Responsive design
+- [X] Items aligned
+- [X] Content legible (not too wide, obstructed, etc)
+- [X] Refreshing doesn't cause an issue on sub-pages
+- [ ] No errors in the console
+- [X] Votes / Posts / Deletions happen instantly _OR_ give user indication of loading
+- [ ] lighthouse - check accessibility - contrast on text, appropriate tags for buttons
+- [ ] format headings eg (roll-and-write -> Roll and Write)
+
+## Functionality
+
+### Login
+- [ ] Some indication of who is logged in
+
+### Articles (Reviews)
+- [X] Serves all articles / top articles
+- [X] Can vote on articles
+- [ ] Can vote a maximum of once in either direction per page load
+- [X] Votes are persistent when page is refreshed
+- [X] Topic pages load only relevant articles (especially when navigating from one topic page to another)
+- [ ] Can sort articles by date created / comment_count / votes
+
+### Individual Article (Review) / Comments
+- [?/X] Individual articles are served with comments
+- [x] Can vote on comments
+- [ ] Can vote a maximum of once in either direction per page load
+- [ ] Votes are persistent when page is refreshed
+- [ ] Can post new comments, which are persistent
+- [ ] Can only delete comments of logged in user
+- [ ] Deleted comments don't re-appear on re-render/refresh
+
+## Error Handling
+- [ ] Bad url
+- [ ] Bad topic slug in url
+- [ ] Bad article id in url
+- [ ] Post comment: (No text in comment body / Can you post without logging in?)
+- [ ] check API routes
+
+## Code
+- [X] Well named components
+- [X] Components reused where possible (`Articles` / `Voter`...)
+- [X] Minimal state - don't hold derivable data in state
+- [ ] Set state correctly, using previous state where possible
+- [X] Handle asynchronicity clearly (i.e. isLoading pattern)
+- [ ] Functions are DRY (`handleChange` for controlled components / api calls)
+- [ ] Use object destructuring where possible
+- [X] Tidy? If not: ESLint / Prettier
+- [X] `node_modules` git ignored
+- [ ] No `console.log`s / comments
+- [ ] remove unnecessary files (e.g. App.test.js)
+
+## Additional 
+- large pictures 
+- format categories util function 
+- JSON describing all the available endpoints on your BE API

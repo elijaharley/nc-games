@@ -19,7 +19,7 @@ const CommentsByReviewId = () => {
   if (isLoading) return <p>Loading...</p>;
 
   return (
-    <Container className='container-layout'>
+    <Container fluid className='container-layout'>
       <Jumbotron>
         <h2>Comments for Review #{`${params.review_id}`}</h2>
       </Jumbotron>

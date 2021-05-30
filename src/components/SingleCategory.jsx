@@ -26,7 +26,7 @@ const SingleCategory = () => {
   }, [params.category]);
   if (isLoading) return <p>Loading...</p>;
   return (
-    <Container className='container-layout'>
+    <Container fluid className='container-layout'>
       <Jumbotron>
         <h2>{`${params.category}`} games</h2>
       </Jumbotron>
@@ -40,6 +40,7 @@ const SingleCategory = () => {
                   variant='top'
                   src={review.review_img_url}
                   alt={review.title}
+                  className='img'
                 />
                 <Card.Body className='d-flex flex-column'>
                   <div className='d-flex mb-2 justify-content-between'>

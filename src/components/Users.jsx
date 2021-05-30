@@ -17,7 +17,7 @@ const Users = () => {
   if (isLoading) return <p>Loading...</p>;
 
   return (
-    <Container className='container-layout'>
+    <Container fluid className='container-layout'>
       <Jumbotron variant='dark'>
         <h2>Users</h2>
       </Jumbotron>
@@ -29,6 +29,7 @@ const Users = () => {
                 variant='top'
                 src={user.avatar_url}
                 alt={user.username}
+                className='img'
               />
               <Card.Body className='d-flex flex-column'>
                 <div className='d-flex mb-2 justify-content-between'>

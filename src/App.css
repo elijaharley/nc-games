@@ -1,16 +1,16 @@
 * {
   text-align: center;
   font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
+  font-weight: 600;
 }
-.container {
+.container-layout {
   background-color: rgb(152, 187, 189);
   padding-bottom: 2em;
 }
 
 .jumbotron {
   background-color: #464142ef !important;
-  font-weight: 300;
+  font-weight: 400;
   color: white;
 }
 
@@ -18,5 +18,16 @@
   color: rgb(41, 170, 177);
 }
 .nav {
-  color: #464142ef;
+  color: #1a1919ef;
+}
+
+.img {
+  max-width: 150px;
+  width: 100%;
+}
+
+.card-columns {
+  align-items: center;
+  max-width: 90vw;
+  margin-left: 0%;
 }

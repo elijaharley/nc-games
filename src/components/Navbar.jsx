@@ -3,7 +3,7 @@ import { Container, Nav } from 'react-bootstrap';
 
 const Navbar = () => {
   return (
-    <Container className='container-layout'>
+    <Container fluid className='container-layout'>
       <Nav justify variant='info' defaultActiveKey='/home'>
         <Nav.Item>
           <Nav.Link href='/' className='nav'>
