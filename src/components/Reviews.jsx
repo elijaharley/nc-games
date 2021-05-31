@@ -74,14 +74,16 @@ const Reviews = () => {
                       </Card.Title>
                     </Link>
                   </div>
-                  <Card.Text className='text-secondary'>
-                    {reviews.category
-                      .replaceAll('-', ' ')
-                      .replace(
-                        reviews.category[0],
-                        reviews.category[0].toUpperCase()
-                      )}
-                  </Card.Text>
+                  <Link to={`/categories/${reviews.category}`}>
+                    <Card.Text className='text-secondary'>
+                      {reviews.category
+                        .replaceAll('-', ' ')
+                        .replace(
+                          reviews.category[0],
+                          reviews.category[0].toUpperCase()
+                        )}
+                    </Card.Text>
+                  </Link>
                   <h3>
                     <Votes
                       votes={reviews.votes}

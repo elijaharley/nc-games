@@ -10,28 +10,25 @@ import Users from './components/Users';
 import ReviewsById from './components/ReviewsById';
 import SingleCategory from './components/SingleCategory';
 import CommentsByReviewId from './components/CommentsByReviewId';
-// import RequireLogin from './components/RequireLogin';
+//import RequireLogin from './components/RequireLogin';
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <Home />
       <Switch>
         <UserProvider>
+          {/* <RequireLogin> */}
           <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route exact path='/reviews'>
             <Reviews />
           </Route>
           <Route exact path='/reviews/:review_id'>
             <ReviewsById />
           </Route>
-          {/* <RequireLogin> */}
           <Route exact path='/reviews/:review_id/comments'>
             <CommentsByReviewId />
           </Route>
-          {/* </RequireLogin> */}
           <Route exact path='/categories'>
             <Categories />
           </Route>
@@ -41,6 +38,7 @@ function App() {
           <Route exact path='/users'>
             <Users />
           </Route>
+          {/* </RequireLogin> */}
         </UserProvider>
       </Switch>
     </Router>

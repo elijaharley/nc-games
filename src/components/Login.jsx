@@ -21,6 +21,7 @@ function Login() {
           setUsername(e.target.value);
         }}
       />
+      <input type='submit' value='submit' />
     </form>
   );
 }

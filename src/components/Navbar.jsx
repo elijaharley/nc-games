@@ -7,17 +7,12 @@ const Navbar = () => {
       <Nav justify variant='info' defaultActiveKey='/home'>
         <Nav.Item>
           <Nav.Link href='/' className='nav'>
-            Home
+            Reviews
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href='/categories' className='nav'>
             Categories
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href='/reviews' className='nav'>
-            Reviews
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
