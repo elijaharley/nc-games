@@ -5,15 +5,14 @@ import { Container } from 'react-bootstrap';
 
 const CommentAdder = ({ review_id }) => {
   const [comment, setComment] = useState('');
+
   return (
     <Container>
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          api.postComment(review_id).then((postedComment) => {
-            //error on this line w/onSubmit
+          api.postComment(review_id, comment).then((postedComment) => {
             setComment((currentComments) => {
-              console.log([postedComment, ...currentComments]);
               return [postedComment, ...currentComments];
             });
           });

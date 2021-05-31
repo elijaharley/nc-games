@@ -3,10 +3,10 @@ combine single category with reviews
 sort out sort_by - error msg - elijaharley-games.herokuapp.com/api/reviews?category=%7B%22sortOrder%22:%22ASC%22%7D&sort_by=ASC:1 Failed to load resource: the 
 
 CommentsByReviewId - 
-sort formatting on timestamp
-create comment functionality - post rq
-error handling for no comments
-post rq error - https://elijaharley-games.herokuapp.com/api/reviews/undefined/comments
+[x] sort out timestamp
+[ ] create comment functionality - post rq backend
+[ ] error handling for no comments
+[ ] post rq error msg
 
 Home - 
 Links on page
@@ -86,3 +86,4 @@ text color link
 - large pictures 
 - format categories util function 
 - JSON describing all the available endpoints on your BE API
+- sort_by on comments posted

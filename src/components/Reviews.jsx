@@ -12,7 +12,6 @@ const Reviews = () => {
   const [sortOrder, setSortOrder] = useState('ASC');
   const [isLoading, setIsLoading] = useState(true);
   const params = useParams();
-  console.log(params);
 
   useEffect(() => {
     setIsLoading(true);

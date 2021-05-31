@@ -40,13 +40,12 @@ export const patchReviewVotes = async (review_id, inc_votes) => {
   const { data } = await gamesApi.patch(`/reviews/${review_id}`, {
     inc_votes
   });
-  console.log(data.votes);
+  console.log(data.review[0].votes);
 };
 
 export const postComment = async (review_id, comment) => {
-  console.log('inside post api', review_id);
   const { data } = await gamesApi.post(`/reviews/${review_id}/comments`, {
     comment
   });
-  console.log(data.comment);
+  console.log(data.comments);
 };
