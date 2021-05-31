@@ -3,7 +3,7 @@ import { Container, Jumbotron } from 'react-bootstrap';
 
 const Home = () => {
   return (
-    <Container fluid className='container-layout'>
+    <Container fluid className='container-header'>
       <Jumbotron>
         <h1> NC Games</h1>
       </Jumbotron>

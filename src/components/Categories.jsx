@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Card, CardGroup, Container, Jumbotron } from 'react-bootstrap';
+import { Card, CardGroup, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 import { Link } from 'react-router-dom';
@@ -17,9 +17,7 @@ const Categories = () => {
   if (isLoading) return <p>Loading...</p>;
   return (
     <Container fluid className='container-layout justify-content-center'>
-      <Jumbotron>
-        <h2>Categories</h2>
-      </Jumbotron>
+      <h2>Categories</h2>
       <CardGroup className='card-columns'>
         {categories.map((category) => {
           return (

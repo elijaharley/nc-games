@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Card, CardGroup, Container, Jumbotron } from 'react-bootstrap';
+import { Card, CardGroup, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 
@@ -19,9 +19,7 @@ const Users = () => {
 
   return (
     <Container fluid className='container-layout justify-content-center'>
-      <Jumbotron variant='dark'>
-        <h2>Users</h2>
-      </Jumbotron>
+      <h2>Users</h2>
       <CardGroup className='card-columns'>
         {users.map((user) => {
           return (

@@ -3,7 +3,6 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { UserProvider } from './context/user';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
 import Categories from './components/Categories';
 import Reviews from './components/Reviews';
 import Users from './components/Users';
@@ -11,6 +10,7 @@ import ReviewsById from './components/ReviewsById';
 import SingleCategory from './components/SingleCategory';
 import CommentsByReviewId from './components/CommentsByReviewId';
 //import RequireLogin from './components/RequireLogin';
+import Home from './components/Home';
 
 function App() {
   return (

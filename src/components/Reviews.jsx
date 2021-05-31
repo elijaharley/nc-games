@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Badge, Card, CardGroup, Container, Jumbotron } from 'react-bootstrap';
+import { Badge, Card, CardGroup, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 import { useParams } from 'react-router-dom';
@@ -30,13 +30,7 @@ const Reviews = () => {
 
   return (
     <Container fluid className='container-layout justify-content-center'>
-      {params.review_id ? (
-        `Review #${params.review_id}`
-      ) : (
-        <Jumbotron>
-          <h2>Reviews</h2>
-        </Jumbotron>
-      )}
+      {params.review_id ? `Review #${params.review_id}` : <h2>Reviews</h2>}
       <h3>
         <Badge
           variant='info'

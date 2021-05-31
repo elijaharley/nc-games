@@ -47,7 +47,7 @@ const ReviewsById = () => {
                 <Card.Body className='d-flex flex-column'>
                   <div className='d-flex mb-2 justify-content-between'>
                     <Card.Title className='mb-0 font-weight-bold'>
-                      {review.title}
+                      <h2>{review.title}</h2>
                     </Card.Title>
                   </div>
                   <Card.Text className='text-secondary'>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import * as api from '../Utils/api';
-import { Card, Container, Jumbotron } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import Votes from '../Utils/Votes';
 import CommentAdder from '../Utils/CommentAdder';
 import Timestamp from '../Utils/Timestamp';
@@ -22,9 +22,8 @@ const CommentsByReviewId = () => {
 
   return (
     <Container fluid className='container-layout'>
-      <Jumbotron>
-        <h2>Comments for Review #{`${params.review_id}`}</h2>
-      </Jumbotron>
+      <h2>Comments for Review #{`${params.review_id}`}</h2>
+      <br></br>
       <h3>
         <CommentAdder review_id={params.review_id} />
       </h3>

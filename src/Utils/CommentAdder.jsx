@@ -29,6 +29,7 @@ const CommentAdder = ({ review_id }) => {
           required
         />
         <input type='submit' value='submit' />
+        <br></br>
       </form>
     </Container>
   );
