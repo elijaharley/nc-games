@@ -30,7 +30,12 @@ const Categories = () => {
                     <Card.Body className='d-flex flex-column'>
                       <div className='d-flex mb-2 justify-content-around'>
                         <Card.Title className='mb-0 font-weight-bold'>
-                          {category.slug}
+                          {category.slug
+                            .replaceAll('-', ' ')
+                            .replace(
+                              category.slug[0],
+                              category.slug[0].toUpperCase()
+                            )}
                         </Card.Title>
                       </div>
                     </Card.Body>

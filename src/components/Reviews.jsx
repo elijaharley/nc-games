@@ -37,16 +37,18 @@ const Reviews = () => {
           <h2>Reviews</h2>
         </Jumbotron>
       )}
-      <Badge
-        variant='info'
-        onClick={() => {
-          setSortOrder('ASC');
-          setReviews((reviews) => [...reviews].sort());
-        }}
-      >
-        Sort Ascending
-      </Badge>
-      <div></div>
+      <h3>
+        <Badge
+          variant='info'
+          onClick={() => {
+            setSortOrder('ASC');
+            setReviews((reviews) => [...reviews].sort());
+          }}
+        >
+          Sort Ascending
+        </Badge>
+      </h3>
+
       <CardGroup className='card-columns'>
         {reviews.map((reviews) => {
           return (
@@ -73,14 +75,19 @@ const Reviews = () => {
                     </Link>
                   </div>
                   <Card.Text className='text-secondary'>
-                    {reviews.category}
+                    {reviews.category
+                      .replaceAll('-', ' ')
+                      .replace(
+                        reviews.category[0],
+                        reviews.category[0].toUpperCase()
+                      )}
                   </Card.Text>
-                  <h5>
+                  <h3>
                     <Votes
                       votes={reviews.votes}
                       review_id={reviews.review_id}
                     />
-                  </h5>
+                  </h3>
                 </Card.Body>
               </Card>
             </h2>

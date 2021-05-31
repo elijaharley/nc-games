@@ -44,12 +44,12 @@ const CommentsByReviewId = () => {
                   <Card.Text className='text-secondary'>
                     {comment.body}
                   </Card.Text>
-                  <h5>
+                  <h3>
                     <Votes
                       votes={comment.votes}
                       review_id={comment.review_id}
                     />
-                  </h5>
+                  </h3>
                 </Card.Body>
               </Card>
             </h2>

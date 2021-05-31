@@ -9,15 +9,14 @@ CommentsByReviewId -
 [ ] post rq error msg
 
 Home - 
-Links on page
+[ ] Links on page
 
 Users - 
-default img for missing imgs
+[ ] default img for missing imgs
 
 General - 
-Error handling catch blocks
-export functions from components to make reusable
-text color link
+[ ] export functions from components to make reusable
+[ ] text color link
 
 
 # Checklist for Northcoders Games Front End
@@ -38,7 +37,7 @@ text color link
 - [ ] No errors in the console
 - [X] Votes / Posts / Deletions happen instantly _OR_ give user indication of loading
 - [ ] lighthouse - check accessibility - contrast on text, appropriate tags for buttons
-- [ ] format headings eg (roll-and-write -> Roll and Write)
+- [x] format headings eg (roll-and-write -> Roll and Write)
 
 ## Functionality
 
@@ -57,7 +56,7 @@ text color link
 - [?/X] Individual articles are served with comments
 - [x] Can vote on comments
 - [ ] Can vote a maximum of once in either direction per page load
-- [ ] Votes are persistent when page is refreshed
+- [x] Votes are persistent when page is refreshed
 - [ ] Can post new comments, which are persistent
 - [ ] Can only delete comments of logged in user
 - [ ] Deleted comments don't re-appear on re-render/refresh
@@ -83,7 +82,7 @@ text color link
 - [ ] remove unnecessary files (e.g. App.test.js)
 
 ## Additional 
-- large pictures 
-- format categories util function 
-- JSON describing all the available endpoints on your BE API
-- sort_by on comments posted
+[x]large pictures 
+[ ] format categories util function 
+[ ] JSON describing all the available endpoints on your BE API
+[ ] sort_by on comments posted

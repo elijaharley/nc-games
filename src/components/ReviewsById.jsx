@@ -54,14 +54,14 @@ const ReviewsById = () => {
                     {review.review_body}
                   </Card.Text>
                 </Card.Body>
-                <h5>
+                <h3>
                   <Votes votes={review.votes} review_id={review.review_id} />
-                </h5>
+                </h3>
                 <div>
                   <Link to={`/reviews/${review.review_id}/comments`}>
-                    <h5>
+                    <h3>
                       <Badge variant='primary'>Comments</Badge>
-                    </h5>
+                    </h3>
                   </Link>
                 </div>
               </Card>
