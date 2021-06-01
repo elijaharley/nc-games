@@ -1,10 +1,10 @@
 Reviews - 
 [x] combine single category with reviews
-[ ] sort out sort_by - error msg - elijaharley-games.herokuapp.com/api/reviews?category=%7B%22sortOrder%22:%22ASC%22%7D&sort_by=ASC:1 Failed to load resource: the 
+[x] sort out sort_by - error msg - elijaharley-games.herokuapp.com/api/reviews?category=%7B%22sortOrder%22:%22ASC%22%7D&sort_by=ASC:1 Failed to load resource: the 
 
 CommentsByReviewId - 
 [x] sort out timestamp
-[ ] create comment functionality - post rq backend
+[x] create comment functionality - post rq backend
 [ ] error handling for no comments
 [ ] post rq error msg
 
@@ -16,7 +16,7 @@ Users -
 
 General - 
 [ ] export functions from components to make reusable
-[ ] text color link
+[x] text color link
 
 
 # Checklist for Northcoders Games Front End
@@ -38,7 +38,7 @@ General -
 - [X] Votes / Posts / Deletions happen instantly _OR_ give user indication of loading
 - [ ] lighthouse - check accessibility - contrast on text, appropriate tags for buttons
 - [x] format headings eg (roll-and-write -> Roll and Write)
-- [ ] badges to buttons
+- [x] badges to buttons
 
 ## Functionality
 
@@ -48,7 +48,7 @@ General -
 ### Articles (Reviews)
 - [X] Serves all articles / top articles
 - [X] Can vote on articles
-- [ ] Can vote a maximum of once in either direction per page load
+- [x] Can vote a maximum of once in either direction per page load
 - [X] Votes are persistent when page is refreshed
 - [X] Topic pages load only relevant articles (especially when navigating from one topic page to another)
 - [ ] Can sort articles by date created / comment_count / votes
@@ -56,9 +56,9 @@ General -
 ### Individual Article (Review) / Comments
 - [?/X] Individual articles are served with comments
 - [x] Can vote on comments
-- [ ] Can vote a maximum of once in either direction per page load
+- [x] Can vote a maximum of once in either direction per page load
 - [x] Votes are persistent when page is refreshed
-- [ ] Can post new comments, which are persistent
+- [x] Can post new comments, which are persistent
 - [ ] Can only delete comments of logged in user
 - [ ] Deleted comments don't re-appear on re-render/refresh
 

@@ -32,7 +32,7 @@ const Reviews = () => {
     <Container fluid className='container-layout justify-content-center'>
       {params.review_id ? `Review #${params.review_id}` : <h2>Reviews</h2>}
       <h3>
-        <Badge
+        {/* <Badge
           variant='info'
           onClick={() => {
             setSortOrder('ASC');
@@ -40,7 +40,7 @@ const Reviews = () => {
           }}
         >
           Sort Ascending
-        </Badge>
+        </Badge> */}
       </h3>
 
       <CardGroup className='card-columns'>

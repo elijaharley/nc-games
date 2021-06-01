@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Badge, Card, CardGroup, Container } from 'react-bootstrap';
+import { Button, Card, CardGroup, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 import { Link } from 'react-router-dom';
@@ -60,7 +60,7 @@ const ReviewsById = () => {
                 <div>
                   <Link to={`/reviews/${review.review_id}/comments`}>
                     <h3>
-                      <Badge variant='primary'>Comments</Badge>
+                      <Button variant='primary'>Comments</Button>
                     </h3>
                   </Link>
                 </div>
