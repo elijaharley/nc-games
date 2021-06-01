@@ -1,10 +1,12 @@
 import React from 'react';
 import * as api from './api';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Badge } from 'react-bootstrap';
+import { UserContext } from '../context/user';
 
 const Votes = ({ votes, review_id }) => {
   const [upVote, setUpVote] = useState(0);
+  const { user } = useContext(UserContext);
 
   const incVotes = () => {
     setUpVote((votes) => votes + 1);
@@ -13,12 +15,14 @@ const Votes = ({ votes, review_id }) => {
     });
   };
 
+  const isDisabled = upVote > 0 || user === user.username;
+
   return (
     <div>
       <p>Votes: {votes + upVote}</p>
-      <Badge variant='info' onClick={incVotes}>
+      <button variant='info' onClick={incVotes} disabled={isDisabled}>
         Add Votes
-      </Badge>
+      </button>
     </div>
   );
 };
