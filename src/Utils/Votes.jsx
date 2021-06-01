@@ -1,7 +1,7 @@
 import React from 'react';
 import * as api from './api';
 import { useState, useContext } from 'react';
-import { Badge } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { UserContext } from '../context/user';
 
 const Votes = ({ votes, review_id }) => {
@@ -20,9 +20,9 @@ const Votes = ({ votes, review_id }) => {
   return (
     <div>
       <p>Votes: {votes + upVote}</p>
-      <button variant='info' onClick={incVotes} disabled={isDisabled}>
+      <Button variant='info' onClick={incVotes} disabled={isDisabled}>
         Add Votes
-      </button>
+      </Button>
     </div>
   );
 };

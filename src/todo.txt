@@ -38,6 +38,7 @@ General -
 - [X] Votes / Posts / Deletions happen instantly _OR_ give user indication of loading
 - [ ] lighthouse - check accessibility - contrast on text, appropriate tags for buttons
 - [x] format headings eg (roll-and-write -> Roll and Write)
+- [ ] badges to buttons
 
 ## Functionality
 

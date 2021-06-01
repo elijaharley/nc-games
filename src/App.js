@@ -9,7 +9,7 @@ import Users from './components/Users';
 import ReviewsById from './components/ReviewsById';
 import SingleCategory from './components/SingleCategory';
 import CommentsByReviewId from './components/CommentsByReviewId';
-//import RequireLogin from './components/RequireLogin';
+import RequireLogin from './components/RequireLogin';
 import Home from './components/Home';
 
 function App() {
@@ -19,26 +19,26 @@ function App() {
       <Home />
       <Switch>
         <UserProvider>
-          {/* <RequireLogin> */}
-          <Route exact path='/'>
-            <Reviews />
-          </Route>
-          <Route exact path='/reviews/:review_id'>
-            <ReviewsById />
-          </Route>
-          <Route exact path='/reviews/:review_id/comments'>
-            <CommentsByReviewId />
-          </Route>
-          <Route exact path='/categories'>
-            <Categories />
-          </Route>
-          <Route exact path='/categories/:category'>
-            <SingleCategory />
-          </Route>
-          <Route exact path='/users'>
-            <Users />
-          </Route>
-          {/* </RequireLogin> */}
+          <RequireLogin>
+            <Route exact path='/'>
+              <Reviews />
+            </Route>
+            <Route exact path='/reviews/:review_id'>
+              <ReviewsById />
+            </Route>
+            <Route exact path='/reviews/:review_id/comments'>
+              <CommentsByReviewId />
+            </Route>
+            <Route exact path='/categories'>
+              <Categories />
+            </Route>
+            <Route exact path='/categories/:category'>
+              <SingleCategory />
+            </Route>
+            <Route exact path='/users'>
+              <Users />
+            </Route>
+          </RequireLogin>
         </UserProvider>
       </Switch>
     </Router>
