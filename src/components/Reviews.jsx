@@ -31,18 +31,19 @@ const Reviews = () => {
   return (
     <Container fluid className='container-layout justify-content-center'>
       {params.review_id ? `Review #${params.review_id}` : <h2>Reviews</h2>}
-      <h3>
-        <Button
-          variant='info'
-          onClick={() => {
-            setSortOrder('ASC');
-            setReviews((reviews) => [...reviews].sort());
-          }}
-        >
-          Sort Ascending
-        </Button>
-      </h3>
-
+      <div>
+        <h3>
+          <Button
+            variant='info'
+            onClick={() => {
+              setSortOrder('ASC');
+              setReviews((reviews) => [...reviews].sort());
+            }}
+          >
+            Sort Ascending
+          </Button>
+        </h3>
+      </div>
       <CardGroup className='card-columns'>
         {reviews.map((reviews) => {
           return (

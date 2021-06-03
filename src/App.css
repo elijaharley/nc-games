@@ -2,13 +2,21 @@
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
 }
-.container-layout {
+
+/* .container-layout {
   background-color: rgb(152, 187, 189);
   padding: 2em;
   text-align: center;
-  align-items: absolute;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
 }
+@media (min-width: 55em) {
+  .container-layout {
+    display: grid;
+    grid-auto-flow: column;
+  }
+} */
+
 .container-header {
   background-color: rgb(255, 255, 255);
   padding-bottom: 0em;
@@ -38,8 +46,16 @@
   object-fit: cover;
 }
 .card-columns {
-  align-items: center;
   max-width: 200px;
   margin-left: 0%;
   width: '18rem';
+  display: grid;
+  grid-auto-flow: column;
+}
+
+@media (min-width: 55em) {
+  .card-columns {
+    display: grid;
+    grid-auto-flow: column;
+  }
 }
