@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Badge, Card, CardGroup, Container } from 'react-bootstrap';
+import { Button, Card, CardGroup, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as api from '../Utils/api';
 import { useParams } from 'react-router-dom';
@@ -32,7 +32,7 @@ const Reviews = () => {
     <Container fluid className='container-layout justify-content-center'>
       {params.review_id ? `Review #${params.review_id}` : <h2>Reviews</h2>}
       <h3>
-        {/* <Badge
+        <Button
           variant='info'
           onClick={() => {
             setSortOrder('ASC');
@@ -40,7 +40,7 @@ const Reviews = () => {
           }}
         >
           Sort Ascending
-        </Badge> */}
+        </Button>
       </h3>
 
       <CardGroup className='card-columns'>

@@ -4,6 +4,7 @@ import Login from './Login';
 
 function RequireLogin({ children }) {
   const { loggedIn } = useContext(UserContext);
+
   return loggedIn ? children : <Login />;
 }
 

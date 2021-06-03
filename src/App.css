@@ -6,7 +6,8 @@
   background-color: rgb(152, 187, 189);
   padding: 2em;
   text-align: center;
-  align-items: center;
+  align-items: absolute;
+  display: flex;
 }
 .container-header {
   background-color: rgb(255, 255, 255);

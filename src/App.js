@@ -11,15 +11,17 @@ import SingleCategory from './components/SingleCategory';
 import CommentsByReviewId from './components/CommentsByReviewId';
 import RequireLogin from './components/RequireLogin';
 import Home from './components/Home';
+import LoggedIn from './components/LoggedIn';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Home />
-      <Switch>
-        <UserProvider>
-          <RequireLogin>
+      <UserProvider>
+        <RequireLogin>
+          <LoggedIn />
+          <Switch>
             <Route exact path='/'>
               <Reviews />
             </Route>
@@ -38,9 +40,9 @@ function App() {
             <Route exact path='/users'>
               <Users />
             </Route>
-          </RequireLogin>
-        </UserProvider>
-      </Switch>
+          </Switch>
+        </RequireLogin>
+      </UserProvider>
     </Router>
   );
 }

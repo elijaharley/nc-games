@@ -11,8 +11,12 @@ CommentsByReviewId -
 Home - 
 [x] Links on page
 
+Categories - 
+[ ] Become dropdown
+
 Users - 
 [ ] default img for missing imgs
+[ ] user context
 
 General - 
 [ ] export functions from components to make reusable
@@ -43,7 +47,7 @@ General -
 ## Functionality
 
 ### Login
-- [ ] Some indication of who is logged in
+- [ ] Some indication of who is logged in - navbar
 
 ### Articles (Reviews)
 - [X] Serves all articles / top articles
