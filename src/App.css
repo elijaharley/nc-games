@@ -3,32 +3,37 @@
   font-weight: 400;
 }
 
-/* .container-layout {
+.container-layout {
   background-color: rgb(152, 187, 189);
   padding: 2em;
   text-align: center;
   display: grid;
   grid-auto-flow: column;
+  grid-template-columns: 33% 33% 33%;
 }
 @media (min-width: 55em) {
   .container-layout {
     display: grid;
     grid-auto-flow: column;
   }
-} */
-
-.container-header {
+}
+.header-text {
+  align-items: center;
+  padding: 1em;
+}
+/* .container-header {
   background-color: rgb(255, 255, 255);
   padding-bottom: 0em;
   align-items: center;
   text-align: center;
-}
+} */
 
 .jumbotron {
   background-color: #464142ef !important;
   font-weight: 400;
   color: white;
   text-align: center;
+  margin: 2em;
 }
 
 .link {
@@ -46,16 +51,16 @@
   object-fit: cover;
 }
 .card-columns {
+  padding: 1em;
   max-width: 200px;
-  margin-left: 0%;
   width: '18rem';
   display: grid;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
 }
 
 @media (min-width: 55em) {
   .card-columns {
-    display: grid;
+    display: flex;
     grid-auto-flow: column;
   }
 }
