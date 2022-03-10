@@ -3,14 +3,14 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Button, Card, CardGroup, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import * as api from '../Utils/api';
+import * as api from '../api';
 import { Link } from 'react-router-dom';
 import Votes from '../Utils/Votes';
 
 const ReviewsById = () => {
   const [reviews, setReviews] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-  const params = useParams();
+  const params = useParams();   
 
   useEffect(() => {
     const singleReview = [];
@@ -60,7 +60,7 @@ const ReviewsById = () => {
                 <div>
                   <Link to={`/reviews/${review.review_id}/comments`}>
                     <h3>
-                      <Button variant='primary'>Comments</Button>
+                      <Button variant='primary' >Comments</Button>
                     </h3>
                   </Link>
                 </div>

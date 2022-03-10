@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Button, Card, CardGroup, Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import * as api from '../Utils/api';
+import * as api from '../api';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Votes from '../Utils/Votes';

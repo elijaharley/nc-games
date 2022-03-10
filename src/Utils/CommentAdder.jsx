@@ -1,5 +1,5 @@
 import React from 'react';
-import * as api from './api';
+import * as api from '../api';
 import { useState, useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import UserContext from '../context/user';

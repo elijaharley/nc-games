@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Card, CardGroup, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import * as api from '../Utils/api';
+import * as api from '../api';
 import { Link } from 'react-router-dom';
 
 const SingleCategory = () => {
